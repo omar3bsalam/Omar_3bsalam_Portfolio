@@ -400,4 +400,111 @@ a {
 .footer-social-icons a:hover {
     color: #7cf03d;
     transition: all 0.7s ease;
+
+}
+/* ================= RESPONSIVE ================= */
+
+/* شاشات التابلت */
+@media (max-width: 992px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    height: auto;
+    padding: 120px 5% 60px;
+  }
+
+  .home-info h1 {
+    font-size: 40px;
+  }
+
+  .home-info h2 {
+    font-size: 24px;
+  }
+
+  .home-img .img-box {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .navbar ul li {
+    margin-left: 20px;
+  }
+
+  .project-card {
+    width: 20em;
+  }
+}
+
+/* شاشات الموبايل */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navbar ul {
+    display: none; /* نخفي القائمة الأساسية */
+  }
+
+  .navbar .logo {
+    font-size: 24px;
+  }
+
+  .home-info h1 {
+    font-size: 32px;
+  }
+
+  .home-info h2 {
+    font-size: 20px;
+  }
+
+  .home-info p {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .project-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* شاشات أصغر (موبايلات صغيرة جداً) */
+@media (max-width: 480px) {
+  .home-info h1 {
+    font-size: 26px;
+  }
+
+  .home-info h2 {
+    font-size: 18px;
+  }
+
+  .home-info p {
+    font-size: 13px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 6px 15px;
+  }
+
+  .home-img .img-box {
+    width: 70vw;
+    height: 70vw;
+  }
 }
