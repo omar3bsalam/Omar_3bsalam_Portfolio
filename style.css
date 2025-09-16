@@ -18,12 +18,12 @@ a {
     left: 0;
     top: 0;
     width: 100%;
-    height: 40px;
-    padding: 25px;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background: #1f242d;
     visibility: hidden;
     opacity: 0;
     animation: show-content 1.5s linear forwards;
@@ -281,10 +281,11 @@ a {
 
 .card:hover {
     transform: scale(1.2);
+}
 
-    .icon, h3 {
-        color: #7cf03d;
-    }
+.card:hover .icon,
+.card:hover h3 {
+    color: #7cf03d;
 }
 
 .icon {
@@ -377,9 +378,10 @@ a {
     margin-bottom: 20px;
 }
 
-/* section {
-    padding: 60px 100px;
-} */
+section {
+    margin-bottom: 60px;
+}
+
 .footer {
     background-color: #1f242d;
     display: flex;
@@ -387,7 +389,6 @@ a {
     padding: 20px 0;
     text-align: center;
     color: rgb(255, 255, 255);
-    max-height: 100%;
 }
 
 .footer-social-icons a {
@@ -400,111 +401,63 @@ a {
 .footer-social-icons a:hover {
     color: #7cf03d;
     transition: all 0.7s ease;
+} 
 
+
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
 }
-/* ================= RESPONSIVE ================= */
 
-/* شاشات التابلت */
-@media (max-width: 992px) {
-  .home {
+/* للموبايل */
+@media (max-width: 768px) {
+  .navbar ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    background: #1f242d;
     flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    height: auto;
-    padding: 120px 5% 60px;
-  }
-
-  .home-info h1 {
-    font-size: 40px;
-  }
-
-  .home-info h2 {
-    font-size: 24px;
-  }
-
-  .home-img .img-box {
-    width: 50vw;
-    height: 50vw;
+    align-items: flex-start;
+    display: none;
+    padding: 15px;
   }
 
   .navbar ul li {
-    margin-left: 20px;
+    margin: 15px 0;
   }
 
-  .project-card {
-    width: 20em;
-  }
-}
-
-/* شاشات الموبايل */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 15px 20px;
+  .menu-toggle {
+    display: block;
   }
 
-  .navbar ul {
-    display: none; /* نخفي القائمة الأساسية */
+  .navbar ul.show {
+    display: flex;
   }
 
-  .navbar .logo {
-    font-size: 24px;
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+    height: auto;
+    padding-bottom: 50px;
+
   }
 
-  .home-info h1 {
-    font-size: 32px;
-  }
-
-  .home-info h2 {
-    font-size: 20px;
-  }
-
-  .home-info p {
-    font-size: 14px;
-  }
-
-  .btn {
-    font-size: 14px;
-    padding: 8px 20px;
+  .home-img .img-box {
+    width: 60vw;
+    height: 60vw;
+    margin-top: 20px;
   }
 
   .card {
     width: 90%;
-    margin: 10px auto;
   }
 
   .project-card {
     width: 90%;
-    margin: 10px auto;
-  }
-
-  .footer {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-}
-
-/* شاشات أصغر (موبايلات صغيرة جداً) */
-@media (max-width: 480px) {
-  .home-info h1 {
-    font-size: 26px;
-  }
-
-  .home-info h2 {
-    font-size: 18px;
-  }
-
-  .home-info p {
-    font-size: 13px;
-  }
-
-  .btn {
-    font-size: 13px;
-    padding: 6px 15px;
-  }
-
-  .home-img .img-box {
-    width: 70vw;
-    height: 70vw;
   }
 }
