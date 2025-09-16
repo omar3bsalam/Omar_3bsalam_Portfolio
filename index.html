@@ -17,8 +17,11 @@
   <body>
     <nav class="navbar">
       <a href="#" class="logo">portfolio</a>
-      <ul>
-        <li class="active"><a href="#">About</a></li>
+      <div class="menu-toggle" id="menu-toggle">
+    <i class="bx bx-menu"></i>
+  </div>
+      <ul id="nav-links">
+        <li><a href="#">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -252,5 +255,13 @@
         ></a>
       </div>
     </footer>
+    <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
   </body>
 </html>
